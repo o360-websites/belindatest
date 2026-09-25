@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #FAF7F2; }
+  a { color: #1F3A2E; text-decoration: none; }
+  a:hover { color: #A9823C; }
+  html { scroll-behavior: smooth; }
+  .nav-burger { display: none; }
+  .nav-dd { position: relative; }
+  .nav-dd-menu { display: none; position: absolute; top: 100%; left: -16px; padding-top: 14px; z-index: 60; }
+  .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: block; }
+  @media (min-width: 861px) { .grid-6 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+  @media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr) !important; } }
+  @media (max-width: 860px) { .grid-sym { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } .grid-3 { grid-template-columns: minmax(0, 1fr) !important; } }
+  @media (max-width: 440px) { .grid-sym { grid-template-columns: minmax(0, 1fr) !important; } }
+  @media (max-width: 1120px) {
+    .nav-desktop { display: none !important; }
+    .nav-burger { display: inline-flex !important; }
+  }
+</style>
+</helmet>
+<div style="font-family: 'DM Sans', system-ui, sans-serif; color: #2E2A25; background: #FAF7F2; -webkit-font-smoothing: antialiased;">
+
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: center; justify-content: space-between; gap: 24px; padding: 14px clamp(16px, 4vw, 56px); background: rgba(250, 247, 242, 0.9); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(46, 42, 37, 0.07); box-shadow: 0 6px 24px -18px rgba(46, 42, 37, 0.45);">
+    <a href="index.html" style="display: flex; align-items: center; flex: 0 0 auto;"><img src="logo-nhc.webp" alt="Noor Health Clinic" style="height: 40px; width: auto; display: block;" /></a>
+    <button class="nav-burger" type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="align-items: center; justify-content: center; width: 46px; height: 46px; padding: 0; border: 1px solid rgba(46, 42, 37, 0.16); border-radius: 12px; background: rgba(255, 253, 248, 0.9); cursor: pointer; flex-direction: column; gap: 5px;">
+      <span style="display: block; width: 20px; height: 1.5px; background: #2A2621;"></span>
+      <span style="display: block; width: 20px; height: 1.5px; background: #2A2621;"></span>
+      <span style="display: block; width: 20px; height: 1.5px; background: #2A2621;"></span>
+    </button>
+    <nav class="nav-desktop" style="display: flex; flex-wrap: nowrap; white-space: nowrap; align-items: center; gap: clamp(14px, 2vw, 28px); font-size: 15px;">
+      <a href="about-us.html" style="color: #4A443B;" style-hover="color: #1F3A2E;">About Us</a>
+      <div class="nav-dd">
+        <a href="index.html#care" style="display: inline-flex; align-items: center; gap: 6px; color: #4A443B;" style-hover="color: #1F3A2E;">How We Can Help <span style="font-size: 11px; line-height: 1;">▾</span></a>
+        <div class="nav-dd-menu">
+          <div style="display: grid; gap: 2px; min-width: 210px; padding: 10px; border-radius: 16px; background: #FDFDFA; border: 1px solid rgba(46, 42, 37, 0.08); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 22px 40px -20px rgba(46, 42, 37, 0.45);">
+            <a href="primary-care.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Primary Care</a>
+            <a href="chronic-disease-management.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Chronic Disease Management</a>
+            <a href="remote-monitoring.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Remote Monitoring</a>
+            <a href="patient-education.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Patient Education</a>
+          </div>
+        </div>
+      </div>
+      <a href="insurance.html" style="color: #4A443B;" style-hover="color: #1F3A2E;">Insurance</a>
+      <a href="memberships.html" style="color: #4A443B;" style-hover="color: #1F3A2E;">Membership</a>
+      <a href="contact-us.html" style="color: #4A443B;" style-hover="color: #1F3A2E;">Contact Us</a>
+      <a href="tel:2069847603" style="color: #1F3A2E; font-weight: 500;">206-984-7603</a>
+      <a href="#book" style="display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 10px 22px -12px rgba(122, 92, 38, 0.55);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book a Visit</a>
+    </nav>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position: absolute; top: 100%; left: 0; right: 0; display: grid; gap: 4px; padding: 14px clamp(16px, 4vw, 56px) 22px; background: #FAF7F2; border-bottom: 1px solid rgba(46, 42, 37, 0.1); box-shadow: 0 18px 30px -22px rgba(46, 42, 37, 0.5);">
+        <a href="about-us.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">About Us</a>
+        <a href="index.html#care" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">How We Can Help</a>
+        <a href="primary-care.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Primary Care</a>
+        <a href="chronic-disease-management.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Chronic Disease Management</a>
+        <a href="remote-monitoring.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Remote Monitoring</a>
+        <a href="patient-education.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Patient Education</a>
+        <a href="insurance.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">Insurance</a>
+        <a href="memberships.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">Membership</a>
+        <a href="contact-us.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">Contact Us</a>
+        <a href="tel:2069847603" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #1F3A2E; font-weight: 500;">206-984-7603</a>
+        <a href="#book" onClick="{{ closeMenu }}" style="margin-top: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 24px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 10px 22px -12px rgba(122, 92, 38, 0.55);">Book a Visit</a>
+      </div>
+    </sc-if>
+  </header>
+
+  <section id="top" data-screen-label="Primary Care hero" style="position: relative; padding: clamp(56px, 8vw, 112px) clamp(16px, 4vw, 56px) clamp(64px, 9vw, 124px); background-color: #E7E8DF; background-image: radial-gradient(120% 90% at 50% 0%, rgba(243, 244, 238, 0.86) 0%, rgba(238, 239, 231, 0.78) 50%, rgba(243, 240, 233, 0.88) 100%), url('img-office-exam.jpg'); background-size: cover, cover; background-position: center, center; border-bottom: 1px solid rgba(46, 42, 37, 0.06);">
+    <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <p style="margin: 0 0 20px; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #3C5B49; font-weight: 500;">Our Services</p>
+      <h1 style="margin: 0 0 30px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; color: #2A2621; text-wrap: balance;">Primary Care &amp; Direct Primary Care</h1>
+      <div style="max-width: 540px; margin: 0 auto; background: linear-gradient(180deg, #FCFDFA 0%, #F4F7EF 100%); border: 1px solid rgba(255, 255, 255, 0.92); border-radius: 24px; padding: clamp(16px, 2vw, 22px) clamp(18px, 2.8vw, 30px); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 30px 60px -30px rgba(46, 42, 37, 0.4);">
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #5E564B; text-wrap: pretty;">Empowering patients with education and technology to stay healthy and out of the hospital. ARNP-led, relationship-based primary care blending science with compassion.</p>
+      </div>
+      <div style="margin-top: 32px; display: flex; justify-content: center;"><a href="https://waitwhile.com/locations/noor-health-clinic" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book an appointment <span style="font-size: 17px;">→</span></a></div>
+    </div>
+  </section>
+
+  <section id="overview" data-screen-label="Overview" style="padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px) clamp(40px, 5vw, 64px); background: #FAF7F2;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p style="margin: 0; font-size: 16.5px; line-height: 1.65; color: #5E564B; text-wrap: pretty;">Noor Health Clinic provides adult primary care through <strong style="color: #2A2621; font-weight: 700;">in-person visits, virtual visits, and remote patient monitoring (RPM)</strong>. This flexible approach helps patients receive the right type of care for their needs while <strong style="color: #2A2621; font-weight: 700;">staying connected to their care team between visits</strong>.</p>
+    </div>
+  </section>
+
+  <section id="services" data-screen-label="Our Services" style="padding: clamp(24px, 3vw, 40px) clamp(16px, 4vw, 56px) clamp(56px, 7vw, 104px); background: #FAF7F2;">
+    <div style="max-width: 1060px; margin: 0 auto;">
+      <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500; text-align: center;">What We Offer</p>
+      <h2 style="margin: 0 0 clamp(28px, 3.5vw, 40px); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -0.015em; color: #2A2621; text-align: center;">Primary Care Services</h2>
+      <div class="grid-sym grid-6" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+          <div style="background: linear-gradient(180deg, #FDFDFA 0%, #F1F1EA 100%); border: 1px solid rgba(46, 42, 37, 0.07); border-radius: 22px; padding: 26px 24px 28px; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 20px 40px -24px rgba(46, 42, 37, 0.42);" style-hover="box-shadow: 0 1px 2px rgba(46,42,37,0.05), 0 28px 50px -24px rgba(46,42,37,0.5); transform: translateY(-2px);">
+            <img src="{{ s.icon }}" alt="" style="width: 72px; height: 72px; display: block; margin-bottom: 20px;" />
+            <h3 style="margin: 0 0 8px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #2A2621;">{{ s.t }}</h3>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.55; color: #6B6257;">{{ s.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="dpc" data-screen-label="DPC callout" style="padding: 0 clamp(16px, 4vw, 56px) clamp(56px, 7vw, 104px); background: #FAF7F2;">
+    <div class="split" style="max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: 32px; overflow: hidden; background: linear-gradient(160deg, #ECEEE6 0%, #E2E4D9 100%); border: 1px solid rgba(60, 91, 73, 0.16); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.04), 0 40px 70px -40px rgba(46, 42, 37, 0.35);">
+      <div role="img" aria-label="A provider reviewing health readings with a patient" style="min-height: 320px; height: 100%; background: url('img-office-consult.jpg') center / cover no-repeat;"></div>
+      <div style="padding: clamp(28px, 4.5vw, 56px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6046;">Direct Primary Care</p>
+        <p style="margin: 0 0 28px; font-size: 16.5px; line-height: 1.65; color: #3A342C; text-wrap: pretty;">We offer direct primary care (DPC), a <strong style="color: #2A2621; font-weight: 700;">membership-based model</strong> that provides access to defined primary care services for a monthly fee. DPC supports personalized, ongoing care but does not replace health insurance.</p>
+        <a href="memberships.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-size: 15.5px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 12px 24px -16px rgba(46, 42, 37, 0.5);" style-hover="background: #FFFFFF;">See Membership Options <span style="font-size: 16px;">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Image band" role="img" aria-label="Noor Health Clinic reception area" style="min-height: clamp(280px, 32vw, 400px); background: url('img-office-reception.jpg') center 40% / cover no-repeat;"></section>
+
+  <section id="faq" data-screen-label="FAQ" style="padding: clamp(40px, 5vw, 72px) clamp(16px, 4vw, 56px); background: #F3F5F0; border-top: 1px solid rgba(46, 42, 37, 0.06);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500; text-align: center;">Questions</p>
+      <h2 style="margin: 0 0 clamp(28px, 3.5vw, 44px); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; color: #2A2621; text-align: center;">FAQ</h2>
+      <div style="display: grid; gap: 10px;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
+          <div>
+            <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 14px; padding: 20px clamp(18px, 3vw, 28px); border-radius: 20px; background: linear-gradient(180deg, #FDFDFA 0%, #F6F6F0 100%); border: 1px solid rgba(46, 42, 37, 0.08); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.04), 0 12px 24px -20px rgba(46, 42, 37, 0.4); cursor: pointer; text-align: left; font-family: 'Poppins', sans-serif; font-size: clamp(16px, 1.4vw, 17.5px); font-weight: 500; color: #2A2621;">
+              <span>{{ f.q }}</span>
+              <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: #E7EDE4; color: #1F3A2E; font-family: 'DM Sans', sans-serif; font-size: 20px; line-height: 1;">{{ f.sign }}</span>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <p style="margin: 0; padding: 18px clamp(18px, 3vw, 28px) 14px; max-width: 760px; font-size: 16.5px; line-height: 1.7; color: #5E564B; text-wrap: pretty;">{{ f.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: clamp(64px, 9vw, 132px) clamp(24px, 5vw, 72px); background: #E7EDE4; border-top: 1px solid rgba(60, 91, 73, 0.14);" data-screen-label="Providers">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 4vw, 56px);">
+      <div style="display: flex; flex: 0 0 auto; gap: 14px;">
+        <img src="img-shadia-2.webp" alt="Shadia, nurse practitioner" style="width: clamp(130px, 15vw, 172px); height: clamp(170px, 20vw, 230px); object-fit: cover; object-position: center top; border-radius: 18px; box-sizing: border-box; border: 4px solid #F7FAF4; box-shadow: 0 16px 32px -16px rgba(46, 42, 37, 0.5); display: block;" />
+        <img src="img-hodo-2.webp" alt="Hodo, nurse practitioner" style="width: clamp(130px, 15vw, 172px); height: clamp(170px, 20vw, 230px); object-fit: cover; object-position: center top; border-radius: 18px; box-sizing: border-box; border: 4px solid #F7FAF4; box-shadow: 0 16px 32px -16px rgba(46, 42, 37, 0.5); display: block;" />
+      </div>
+      <div style="flex: 1 1 300px; min-width: 0;">
+        <h2 style="margin: 0 0 14px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; color: #1F3A2E;">Meet the Providers</h2>
+        <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.7; color: #5E564B;">Shadia and Hodo are University of Washington-trained Nurse Practitioners who founded Noor Health Clinic to give families un-rushed visits, clear health guidance, and simple home monitoring - keeping your supports and in control.</p>
+        <a href="about-us.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-size: 15.5px; font-weight: 500; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 12px 24px -16px rgba(46, 42, 37, 0.5);" style-hover="background: #FFFFFF;">Read Our Story <span style="font-size: 16px;">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" style="position: relative; z-index: 1; padding: clamp(64px, 9vw, 140px) clamp(24px, 5vw, 72px); background-color: #1F3A2E; background-image: linear-gradient(0deg, rgba(31, 58, 46, 0.9) 0%, rgba(31, 58, 46, 0.84) 100%), url('img-grass.jpg'); background-size: cover, cover; background-position: center, center;">
+    <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+      <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #D2B27E;">Book a Visit</p>
+      <h2 style="margin: 0 0 20px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.035em; color: #F3F5F0;">Let's Get You Seen</h2>
+      <p style="margin: 0 auto 40px; max-width: 460px; font-size: 16.5px; line-height: 1.7; color: rgba(251, 249, 244, 0.86);">Pick a time that works for you.<br />It only takes a minute.</p>
+      <a href="#book" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book Now <span style="font-size: 17px;">→</span></a>
+    </div>
+  </section>
+
+  <footer style="padding: clamp(36px, 5vw, 64px) clamp(16px, 4vw, 56px); background: linear-gradient(180deg, #EBEDE4 0%, #E2E4D9 100%); border-top: 1px solid rgba(60, 91, 73, 0.14);">
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: clamp(28px, 4vw, 48px); text-align: center; justify-items: center;">
+      <div style="display: grid; justify-items: center;">
+        <img src="logo-nhc.webp" alt="Noor Health Clinic" style="height: 68px; width: auto; display: block; margin-bottom: 18px;" />
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #3A342C;">9238 Rainier Ave S, Suite B<br />Seattle, WA 98118</p>
+      </div>
+      <div style="display: grid; gap: 12px; align-content: start; justify-items: center;">
+        <p style="margin: 0 0 4px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #7A5F22; font-weight: 500;">Explore</p>
+        <a href="about-us.html" style="font-size: 16.5px; color: #3A342C;">About Us</a>
+        <a href="index.html#care" style="font-size: 16.5px; color: #3A342C;">How We Can Help</a>
+        <a href="insurance.html" style="font-size: 16.5px; color: #3A342C;">Insurance</a>
+        <a href="memberships.html" style="font-size: 16.5px; color: #3A342C;">Membership</a>
+        <a href="contact-us.html" style="font-size: 16.5px; color: #3A342C;">Contact Us</a>
+        <a href="careers.html" style="font-size: 16.5px; color: #3A342C;">Careers</a>
+      </div>
+      <div style="display: grid; gap: 12px; align-content: start; justify-items: center;">
+        <p style="margin: 0 0 4px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #7A5F22; font-weight: 500;">Contact</p>
+        <a href="tel:2069847603" style="font-size: 16px; color: #2A2621; font-weight: 500;">206-984-7603</a>
+        <a href="mailto:info@noorhealthclinic.com" style="font-size: 16px; color: #2A2621; font-weight: 500;">info@noorhealthclinic.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#1F3A2E"/><circle cx="200" cy="200" r="88" fill="#F0C74E"/><text x="200" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="96" font-weight="600" fill="#1F3A2E">N</text></svg></template>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false, open: 0 };
+  renderVals() {
+    const faqs = [
+      { q: "What is primary care?", a: "Primary care focuses on adult health and ongoing, coordinated care. Our nurse practitioners provide preventive care, evaluate new concerns, manage chronic conditions, prescribe medications, order and interpret diagnostic testing, and coordinate specialty care." },
+      { q: "What is a nurse practitioner?", a: "A nurse practitioner (NP) is an advanced practice clinician with graduate-level education and clinical training. NPs evaluate, diagnose, treat, prescribe medications, order testing, and develop individualized care plans for adult patients." },
+      { q: "What conditions do you treat?", a: "We evaluate and manage a range of adult health concerns, including high blood pressure, diabetes, high cholesterol, heart disease risk factors, asthma/COPD, thyroid conditions, chronic kidney disease, weight-related health concerns, and common acute illnesses." },
+      { q: "Do you provide preventive care?", a: "Yes. Preventive care may include wellness visits, screening recommendations, immunization review, medication and supplement review, lifestyle support, and early identification of health risks." },
+      { q: "What is remote patient monitoring?", a: "Remote patient monitoring (RPM) uses connected home devices, such as blood pressure monitors, smart scales, or glucometers, to share health readings with the care team between visits. RPM may be appropriate for eligible patients managing certain chronic conditions." },
+      { q: "Can you manage multiple chronic conditions?", a: "Yes. We provide ongoing care for patients with more than one chronic condition. Your care plan may include symptom review, medication management, laboratory monitoring, lifestyle support, remote monitoring when appropriate, and specialist coordination." },
+      { q: "Do you provide medication management?", a: "Yes. We review medications for indication, effectiveness, possible side effects, interactions, duplicate therapies, and polypharmacy concerns. Medication reconciliation is also provided after hospital, emergency department, urgent care, or specialist visits when needed." },
+      { q: "Can you coordinate care with specialists?", a: "Yes. We can place referrals, review relevant test results and specialist recommendations, reconcile medications, and help connect each part of your care plan." },
+      { q: "Do you offer telehealth?", a: "Yes. Virtual visits are available for appropriate concerns, including medication follow-up, result review, stable chronic-condition management, home-reading review, counseling, and some mild symptoms. An in-person visit may be recommended when an examination, testing, vaccination, or procedure is needed." },
+      { q: "When should I seek emergency care?", a: "Call 911 or seek emergency care immediately for chest pain, severe trouble breathing, signs of stroke, fainting, seizure, severe allergic reaction, heavy bleeding, severe injury, or thoughts of harming yourself or others. Telehealth is not appropriate for emergencies." }
+    ].map((f, i) => ({ ...f, open: this.state.open === i, sign: this.state.open === i ? "−" : "+", toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })) }));
+    const services = [
+      { icon: "icon-3.svg", t: "In-Person Visits", d: "Preventive care, acute concerns, and hands-on exams." },
+      { icon: "icon-4.svg", t: "Virtual Visits", d: "Follow-ups, medication reviews, and lab results from home." },
+      { icon: "icon-6.svg", t: "Remote Patient Monitoring", d: "Home health readings reviewed between visits." },
+      { icon: "icon-1.svg", t: "Medical Monitoring", d: "Medication review, reconciliation, and monitoring." },
+      { icon: "icon-2.svg", t: "Lab Tests", d: "We order tests and explain your results in plain words." },
+      { icon: "icon-5.svg", t: "Referrals and Coordination", d: "Specialist referrals and care coordination." }
+    ];
+    return {
+      services,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      faqs
+    };
+  }
+}
+</script>
+</body>
+</html>
