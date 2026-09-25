@@ -50,8 +50,11 @@
         <div class="nav-dd-menu">
           <div style="display: grid; gap: 2px; min-width: 210px; padding: 10px; border-radius: 16px; background: #FDFDFA; border: 1px solid rgba(46, 42, 37, 0.08); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 22px 40px -20px rgba(46, 42, 37, 0.45);">
             <a href="primary-care.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Primary Care</a>
+            <a href="preventive-care-and-wellness.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Preventive Care and Wellness</a>
             <a href="chronic-disease-management.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Chronic Disease Management</a>
             <a href="remote-monitoring.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Remote Monitoring</a>
+            <a href="telehealth.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Telehealth</a>
+            <a href="lab-orders-and-care-coordination.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Lab Orders &amp; Care Coordination</a>
             <a href="patient-education.html" style="padding: 10px 14px; border-radius: 10px; color: #3A342C;" style-hover="background: #EEF1EA; color: #1F3A2E;">Patient Education</a>
           </div>
         </div>
@@ -60,21 +63,24 @@
       <a href="memberships.html" style="color: #4A443B;" style-hover="color: #1F3A2E;">Membership</a>
       <a href="contact-us.html" style="color: #4A443B;" style-hover="color: #1F3A2E;">Contact Us</a>
       <a href="tel:2069847603" style="color: #1F3A2E; font-weight: 500;">206-984-7603</a>
-      <a href="#book" style="display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 10px 22px -12px rgba(122, 92, 38, 0.55);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book a Visit</a>
+      <a href="https://waitwhile.com/locations/noor-health-clinic" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 10px 22px -12px rgba(122, 92, 38, 0.55);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book a Visit</a>
     </nav>
     <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
       <div style="position: absolute; top: 100%; left: 0; right: 0; display: grid; gap: 4px; padding: 14px clamp(16px, 4vw, 56px) 22px; background: #FAF7F2; border-bottom: 1px solid rgba(46, 42, 37, 0.1); box-shadow: 0 18px 30px -22px rgba(46, 42, 37, 0.5);">
         <a href="about-us.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">About Us</a>
         <a href="index.html#care" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">How We Can Help</a>
         <a href="primary-care.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Primary Care</a>
+        <a href="preventive-care-and-wellness.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Preventive Care and Wellness</a>
         <a href="chronic-disease-management.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Chronic Disease Management</a>
         <a href="remote-monitoring.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Remote Monitoring</a>
+        <a href="telehealth.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Telehealth</a>
+        <a href="lab-orders-and-care-coordination.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Lab Orders &amp; Care Coordination</a>
         <a href="patient-education.html" onClick="{{ closeMenu }}" style="padding: 9px 0 9px 18px; font-size: 16px; color: #5E564B;">Patient Education</a>
         <a href="insurance.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">Insurance</a>
         <a href="memberships.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">Membership</a>
         <a href="contact-us.html" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #3A342C;">Contact Us</a>
         <a href="tel:2069847603" onClick="{{ closeMenu }}" style="padding: 12px 0; font-size: 17px; color: #1F3A2E; font-weight: 500;">206-984-7603</a>
-        <a href="#book" onClick="{{ closeMenu }}" style="margin-top: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 24px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 10px 22px -12px rgba(122, 92, 38, 0.55);">Book a Visit</a>
+        <a href="https://waitwhile.com/locations/noor-health-clinic" target="_blank" rel="noopener" onClick="{{ closeMenu }}" style="margin-top: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 24px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 10px 22px -12px rgba(122, 92, 38, 0.55);">Book a Visit</a>
       </div>
     </sc-if>
   </header>
@@ -135,7 +141,7 @@
       <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #D2B27E;">Book a Visit</p>
       <h2 style="margin: 0 0 20px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.035em; color: #F3F5F0;">Let's Get You Seen</h2>
       <p style="margin: 0 auto 40px; max-width: 460px; font-size: 16.5px; line-height: 1.7; color: rgba(251, 249, 244, 0.86);">Pick a time that works for you.<br />It only takes a minute.</p>
-      <a href="#book" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book Now <span style="font-size: 17px;">→</span></a>
+      <a href="https://waitwhile.com/locations/noor-health-clinic" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book Now <span style="font-size: 17px;">→</span></a>
     </div>
   </section>
 

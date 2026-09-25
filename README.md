@@ -1,39 +1,33 @@
-# Noor Health Clinic — website handoff
+# Noor Health Clinic — website
 
-Approved designs for the Noor Health Clinic site, ready to rebuild in WordPress / Elementor.
-
-## Contents
-All files sit in one folder. Each page is an HTML file that loads `support.js` plus the images and icons beside it — open any page in a browser (needs internet for fonts). Images are resized to max 1920px wide for web use.
+All files sit in one folder: each page is an HTML file that loads `support.js` plus the images/icons beside it. Open any page in a browser (internet needed for Google Fonts). Images are resized to max 1920px wide.
 
 ## Pages
 | File | Page |
 |---|---|
 | index.html | Home |
 | about-us.html | About Us |
-| memberships.html | Membership |
-| primary-care.html | How We Can Help → Primary Care |
-| chronic-disease-management.html | How We Can Help → Chronic Disease Management |
-| remote-monitoring.html | How We Can Help → Remote Monitoring |
-| patient-education.html | How We Can Help → Patient Education |
+| memberships.html | Memberships |
+| primary-care.html | Primary Care |
+| preventive-care-and-wellness.html | Preventive Care |
+| chronic-disease-management.html | Chronic Disease Management |
+| remote-monitoring.html | Remote Monitoring |
+| telehealth.html | Telehealth |
+| lab-orders-and-care-coordination.html | Lab Orders |
 | insurance.html | Insurance |
+| patient-education.html | Patient Education |
 | contact-us.html | Contact Us |
-| careers.html | Careers (footer only, not in main menu) |
+| careers.html | Careers |
 
-## Icons
-- icon-1 … icon-6: client-provided
-- icon-7 heart / cardiology, icon-8 book / education, icon-9 bandage / wound care
-- icon-10 blood pressure monitor, icon-11 smart scale, icon-12 glucometer
-
-## Notes for the build
-- Keep all copy verbatim — it is client-approved.
-- Contact and Careers forms are front-end only; wire them to a real form handler (e.g. Elementor Forms).
-- "Download PDF" links on Contact Us are placeholders (`href="#"`) until the PDFs are supplied.
-- Patient Education article tiles use lorem ipsum until articles are written.
+## Build notes
+- Keep all copy verbatim — client-approved.
+- Every "Book…" button opens https://waitwhile.com/locations/noor-health-clinic in a new tab.
+- Contact and Careers forms are front-end only; wire to a real form handler (e.g. Elementor Forms).
+- "Download PDF" links on Contact Us and article links on Patient Education are placeholders (`href="#"`).
 
 ---
 
 # Design rules
-
 
 Nurse Practitioner-led primary care practice. Seattle.
 Approved direction: **Home Page.dc.html** (formerly "Version A"). Match it for all new pages.
@@ -75,7 +69,7 @@ Secondary pill: `background: rgba(252,254,250,0.92); border: 1px solid rgba(31,5
   - Paragraph (all body, bullets, fine print): `16.5px`
 
 ## Navigation
-- Main menu: About Us · How We Can Help ▾ (Primary Care, Chronic Disease Management, Remote Monitoring, Patient Education) · Insurance · Membership · Contact Us · phone · Book a Visit. No Careers.
+- Main menu: About Us · How We Can Help ▾ (Primary Care, Preventive Care and Wellness, Chronic Disease Management, Remote Monitoring, Telehealth, Lab Orders & Care Coordination, Patient Education) · Insurance · Membership · Contact Us · phone · Book a Visit. No Careers.
 - Footer Explore: About Us, How We Can Help, Insurance, Membership, Contact Us, Careers.
 
 ## Components

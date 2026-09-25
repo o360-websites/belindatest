@@ -81,12 +81,12 @@
     </sc-if>
   </header>
 
-  <section id="top" data-screen-label="Remote Monitoring hero" style="position: relative; padding: clamp(56px, 8vw, 112px) clamp(16px, 4vw, 56px) clamp(64px, 9vw, 124px); background-color: #E7E8DF; background-image: radial-gradient(120% 90% at 50% 0%, rgba(243, 244, 238, 0.86) 0%, rgba(238, 239, 231, 0.78) 50%, rgba(243, 240, 233, 0.88) 100%), url('img-office-desk.jpg'); background-size: cover, cover; background-position: center, center; border-bottom: 1px solid rgba(46, 42, 37, 0.06);">
+  <section id="top" data-screen-label="Lab Orders hero" style="position: relative; padding: clamp(56px, 8vw, 112px) clamp(16px, 4vw, 56px) clamp(64px, 9vw, 124px); background-color: #E7E8DF; background-image: radial-gradient(120% 90% at 50% 0%, rgba(243, 244, 238, 0.86) 0%, rgba(238, 239, 231, 0.78) 50%, rgba(243, 240, 233, 0.88) 100%), url('img-office-desk.jpg'); background-size: cover, cover; background-position: center, center; border-bottom: 1px solid rgba(46, 42, 37, 0.06);">
     <div style="max-width: 800px; margin: 0 auto; text-align: center;">
       <p style="margin: 0 0 20px; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #3C5B49; font-weight: 500;">Our Services</p>
-      <h1 style="margin: 0 0 30px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; color: #2A2621; text-wrap: balance;">Remote Patient Monitoring</h1>
+      <h1 style="margin: 0 0 30px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; color: #2A2621; text-wrap: balance;">Lab Orders &amp; Care Coordination</h1>
       <div style="max-width: 540px; margin: 0 auto; background: linear-gradient(180deg, #FCFDFA 0%, #F4F7EF 100%); border: 1px solid rgba(255, 255, 255, 0.92); border-radius: 24px; padding: clamp(16px, 2vw, 22px) clamp(18px, 2.8vw, 30px); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 30px 60px -30px rgba(46, 42, 37, 0.4);">
-        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #5E564B; text-wrap: pretty;">Remote patient monitoring uses connected health technology to help our nurse practitioner-led team stay connected to important health trends between visits.</p>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #5E564B; text-wrap: pretty;">Noor Health Clinic provides thoughtful laboratory testing and coordinated care to help patients understand their health and take clear next steps.</p>
       </div>
       <div style="margin-top: 32px; display: flex; justify-content: center;">
         <a href="https://waitwhile.com/locations/noor-health-clinic" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book an appointment <span style="font-size: 17px;">→</span></a>
@@ -94,70 +94,48 @@
     </div>
   </section>
 
-  <section id="devices" data-screen-label="Home Devices" style="padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); background: #FAF7F2;">
-    <div style="max-width: 1060px; margin: 0 auto;">
-      <div style="max-width: 900px; margin: 0 auto clamp(32px, 4vw, 48px); text-align: center;">
-        <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500;">Health Technology</p>
-        <h2 style="margin: 0 0 18px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(32px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.015em; color: #2A2621; text-wrap: balance;">Technology That Keeps You Connected</h2>
-        <p style="margin: 0; font-size: 16.5px; line-height: 1.7; color: #5E564B; text-wrap: pretty;">Smart, connected devices at home send your readings securely to your care team. <strong style="color: #2A2621; font-weight: 700;">Home blood pressure monitors, smart scales, and glucometers</strong> can help identify meaningful changes early and support timely follow-up when needed.</p>
-      </div>
-      <div class="grid-sym grid-6" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
-        <sc-for list="{{ devices }}" as="d" hint-placeholder-count="3">
-          <div style="padding: 28px 24px 30px; text-align: center; display: flex; flex-direction: column; align-items: center; background: linear-gradient(180deg, #FDFDFA 0%, #F1F1EA 100%); border: 1px solid rgba(46, 42, 37, 0.07); border-radius: 22px; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 20px 40px -24px rgba(46, 42, 37, 0.42);">
-            <img src="{{ d.icon }}" alt="" style="width: 72px; height: 72px; display: block; margin-bottom: 18px;" />
-            <h3 style="margin: 0; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #2A2621;">{{ d.t }}</h3>
-          </div>
-        </sc-for>
+  <section id="overview" data-screen-label="Overview" style="padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px) clamp(40px, 5vw, 64px); background: #FAF7F2;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center; display: grid; gap: 20px;">
+      <p style="margin: 0; font-size: 16.5px; line-height: 1.7; color: #5E564B; text-wrap: pretty;">Our nurse practitioner-led team orders tests when they are likely to <strong style="color: #2A2621; font-weight: 700;">guide preventive care, evaluate symptoms, monitor a chronic condition, or support safe medication use</strong>.</p>
+    </div>
+  </section>
+
+  <section id="labs" data-screen-label="Lab Partners" style="padding: clamp(8px, 1vw, 16px) clamp(16px, 4vw, 56px) clamp(56px, 7vw, 104px); background: #FAF7F2;">
+    <div class="split" style="max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: 32px; overflow: hidden; background: linear-gradient(160deg, #ECEEE6 0%, #E2E4D9 100%); border: 1px solid rgba(60, 91, 73, 0.16); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.04), 0 40px 70px -40px rgba(46, 42, 37, 0.35);">
+      <div role="img" aria-label="Noor Health Clinic exam room" style="min-height: 300px; height: 100%; background: url('img-office-exam.jpg') center / cover no-repeat;"></div>
+      <div style="padding: clamp(28px, 4.5vw, 56px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6046;">Lab Partners</p>
+        <h3 style="margin: 0 0 16px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; color: #2A2621;">Labcorp &amp; Quest Diagnostics</h3>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.65; color: #3A342C; text-wrap: pretty;">We partner with <strong style="color: #2A2621; font-weight: 700;">Labcorp and Quest Diagnostics</strong> for laboratory services. For membership patients with insurance, medically necessary laboratory testing is billed through their insurance plan; coverage and any out-of-pocket cost depend on the individual plan and test ordered.</p>
       </div>
     </div>
   </section>
 
-  <section id="support" data-screen-label="Common Conditions" style="padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); background: linear-gradient(180deg, #EDEFE7 0%, #E4E6DB 100%); border-top: 1px solid rgba(46, 42, 37, 0.06);">
+  <section id="support" data-screen-label="How We Support Your Care" style="padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); background: linear-gradient(180deg, #EDEFE7 0%, #E4E6DB 100%); border-top: 1px solid rgba(46, 42, 37, 0.06);">
     <div style="max-width: 1060px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: clamp(28px, 3.5vw, 44px);">
-        <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500;">Personalized Support</p>
-        <h2 style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(32px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.015em; color: #2A2621; text-wrap: balance;">Personalized Support for Common Conditions</h2>
+        <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500;">Coordinated Care</p>
+        <h2 style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(32px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.015em; color: #2A2621; text-wrap: balance;">How We Support Your Care</h2>
       </div>
-      <div class="grid-sym" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
-        <sc-for list="{{ support }}" as="s" hint-placeholder-count="4">
-          <div style="display: flex; flex-direction: column; padding: clamp(26px, 3vw, 36px); background: linear-gradient(180deg, #FDFDFA 0%, #F1F1EA 100%); border: 1px solid rgba(46, 42, 37, 0.07); border-radius: 22px; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 20px 40px -24px rgba(46, 42, 37, 0.42);">
-            <img src="{{ s.icon }}" alt="" style="width: 72px; height: 72px; display: block; margin-bottom: 20px;" />
-            <h4 style="margin: 0 0 14px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.2; color: #2A2621;">{{ s.t }}</h4>
-            <p style="margin: 0 0 22px; font-size: 16.5px; line-height: 1.65; color: #5E564B; text-wrap: pretty;">{{ s.a }}</p>
-            <button type="button" onClick="{{ s.toggle }}" aria-expanded="{{ s.open }}" style="margin-top: auto; width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 12px; padding: 18px 0 0; border: 0; border-top: 1px solid rgba(46, 42, 37, 0.1); background: none; cursor: pointer; text-align: left; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #1F3A2E;">
-              <span>What Your Plan May Include</span>
-              <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: #E7EDE4; color: #1F3A2E; font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 400; line-height: 1;">{{ s.sign }}</span>
-            </button>
-            <sc-if value="{{ s.open }}" hint-placeholder-val="{{ false }}">
-              <p style="margin: 14px 0 0; font-size: 16.5px; line-height: 1.65; color: #5E564B; text-wrap: pretty;">{{ s.b }}</p>
-            </sc-if>
+      <div class="grid-sym grid-6" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+        <sc-for list="{{ supportItems }}" as="s" hint-placeholder-count="6">
+          <div style="padding: 26px 24px 28px; background: linear-gradient(180deg, #FDFDFA 0%, #F1F1EA 100%); border: 1px solid rgba(46, 42, 37, 0.07); border-radius: 22px; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 20px 40px -24px rgba(46, 42, 37, 0.42);">
+            <img src="{{ s.icon }}" alt="" style="width: 72px; height: 72px; display: block; margin-bottom: 18px;" />
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.55; color: #2A2621; font-weight: 500; text-wrap: pretty;">{{ s.t }}</p>
           </div>
         </sc-for>
       </div>
     </div>
   </section>
 
-  <section id="add-on" data-screen-label="High-Touch Monitoring" style="padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); background: #FAF7F2;">
-    <div class="split" style="max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: 32px; overflow: hidden; background: linear-gradient(160deg, #ECEEE6 0%, #E2E4D9 100%); border: 1px solid rgba(60, 91, 73, 0.16); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.04), 0 40px 70px -40px rgba(46, 42, 37, 0.35);">
-      <div role="img" aria-label="A provider reviewing health readings with a patient" style="min-height: 320px; height: 100%; background: url('img-office-consult.jpg') center / cover no-repeat;"></div>
-      <div style="padding: clamp(28px, 4.5vw, 56px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6046;">For Closer Support</p>
-        <h3 style="margin: 0 0 16px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; color: #2A2621;">High-Touch Health Monitoring</h3>
-        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.65; color: #3A342C; text-wrap: pretty;">For patients with high blood pressure, type 2 diabetes, or heart failure who need close care and frequent check-ins, we offer <strong style="color: #2A2621; font-weight: 700;">a more hands-on level of monitoring</strong>.</p>
-        <p style="margin: 0 0 28px; font-size: 16.5px; line-height: 1.65; color: #3A342C; text-wrap: pretty;">You receive <strong style="color: #2A2621; font-weight: 700;">connected smart devices to keep at home</strong> so your care team can check your daily health numbers and support you every step of the way.</p>
-        <a href="contact-us.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-size: 16.5px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 12px 24px -16px rgba(46, 42, 37, 0.5);" style-hover="background: #FFFFFF;">Ask If It's Right for You <span style="font-size: 16px;">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section data-screen-label="Image band" role="img" aria-label="Noor Health Clinic exam room" style="min-height: clamp(280px, 32vw, 400px); background: url('img-office-exam.jpg') center 45% / cover no-repeat;"></section>
+  <section data-screen-label="Image band" role="img" aria-label="Noor Health Clinic office" style="min-height: clamp(280px, 32vw, 400px); background: url('img-office-desk.jpg') center 45% / cover no-repeat;"></section>
 
   <section id="faq" data-screen-label="FAQ" style="padding: clamp(40px, 5vw, 72px) clamp(16px, 4vw, 56px); background: #F3F5F0; border-top: 1px solid rgba(46, 42, 37, 0.06);">
     <div style="max-width: 900px; margin: 0 auto;">
       <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500; text-align: center;">Questions</p>
       <h2 style="margin: 0 0 clamp(28px, 3.5vw, 44px); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; color: #2A2621; text-align: center;">Frequently Asked Questions</h2>
       <div style="display: grid; gap: 10px;">
-        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="2">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
           <div>
             <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 14px; padding: 20px clamp(18px, 3vw, 28px); border-radius: 20px; background: linear-gradient(180deg, #FDFDFA 0%, #F6F6F0 100%); border: 1px solid rgba(46, 42, 37, 0.08); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.04), 0 12px 24px -20px rgba(46, 42, 37, 0.4); cursor: pointer; text-align: left; font-family: 'Poppins', sans-serif; font-size: clamp(16px, 1.4vw, 17.5px); font-weight: 500; color: #2A2621;">
               <span>{{ f.q }}</span>
@@ -168,6 +146,29 @@
             </sc-if>
           </div>
         </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" data-screen-label="Insurance vs Membership" style="position: relative; padding: clamp(44px, calc(9vw - 20px), 108px) clamp(16px, 4vw, 56px) clamp(70px, calc(10vw - 10px), 134px); background-color: #EFE7DA; background-image: radial-gradient(60% 38% at 50% 12%, rgba(250, 247, 242, 0.88) 0%, rgba(250, 247, 242, 0.6) 55%, rgba(250, 247, 242, 0) 100%), url('img-desk-bg-3.jpg'); background-size: 100% 100%, cover; background-position: center, center; background-attachment: scroll, scroll; background-repeat: no-repeat; box-shadow: inset 0 28px 40px -24px rgba(60, 42, 20, 0.45), inset 0 -28px 40px -24px rgba(60, 42, 20, 0.45);">
+    <div style="max-width: 1060px; margin: 0 auto;">
+      <div style="max-width: 720px; margin: 0 auto clamp(36px, 5vw, 60px); text-align: center;">
+        <h2 style="margin: 0 0 16px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; color: #1F3A2E; text-wrap: balance;">Ready to take charge of your health?</h2>
+        <p style="margin: 0 auto; max-width: 600px; font-size: 16.5px; line-height: 1.65; color: #3A342C; text-wrap: pretty;">Book a same-day or next-day appointment with our ARNP-led team—available in-person and virtually across Seattle &amp; Bellevue.</p>
+      </div>
+      <div class="grid-3" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3.5vw, 40px); align-items: stretch;">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-radius: 32px; padding: clamp(36px, 5vw, 64px) clamp(24px, 4vw, 48px); background-color: #F4EFE5; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.45 0 0 0 0 0.35 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;), linear-gradient(160deg, #FDFBF6 0%, #F3EEE3 55%, #E9E2D3 100%); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.95), inset 0 -4px 0 rgba(160, 142, 110, 0.2), 0 3px 0 #DDD4C3, 0 8px 0 #D3C9B6, 0 14px 0 #C8BDA8, 0 18px 20px -6px rgba(80, 64, 40, 0.4), 0 60px 90px -30px rgba(80, 64, 40, 0.65);">
+          <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6046;">Insurance We Accept</p>
+          <h3 style="margin: 0 0 16px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.08; color: #1F3A2E;">Your Plan Is Welcome Here</h3>
+          <p style="margin: 0 auto 32px; max-width: 420px; font-size: 16.5px; line-height: 1.7; color: #5E564B;">We accept <strong style="color: #2A2621; font-weight: 700;">most major plans</strong>, including Medicare and Medicaid. Uninsured? Ask about our <strong style="color: #2A2621; font-weight: 700;">sliding-scale options</strong> — call us and we'll help you check.</p>
+          <a href="tel:2069847603" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 16px 32px -16px rgba(0, 0, 0, 0.5);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Check Your Coverage <span style="font-size: 17px;">→</span></a>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-radius: 32px; padding: clamp(36px, 5vw, 64px) clamp(24px, 4vw, 48px); background-color: #F4EFE5; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.45 0 0 0 0 0.35 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;), linear-gradient(160deg, #FDFBF6 0%, #F3EEE3 55%, #E9E2D3 100%); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.95), inset 0 -4px 0 rgba(160, 142, 110, 0.2), 0 3px 0 #DDD4C3, 0 8px 0 #D3C9B6, 0 14px 0 #C8BDA8, 0 18px 20px -6px rgba(80, 64, 40, 0.4), 0 60px 90px -30px rgba(80, 64, 40, 0.65);">
+          <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6046;">Membership Path</p>
+          <h3 style="margin: 0 0 16px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.08; color: #1F3A2E;">Simple Care, One Clear Price</h3>
+          <p style="margin: 0 auto 32px; max-width: 420px; font-size: 16.5px; line-height: 1.7; color: #5E564B;"><strong style="color: #2A2621; font-weight: 700;">From $75 a month</strong> — <strong style="color: #2A2621; font-weight: 700;">no copays, no surprise bills</strong>. Extended visits and connected home monitoring, from a team who knows you.</p>
+          <a href="memberships.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 16px 32px -16px rgba(0, 0, 0, 0.5);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">See Membership Options <span style="font-size: 17px;">→</span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -223,26 +224,26 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { menuOpen: false, open: 0, sup: -1 };
+  state = { menuOpen: false, open: 0 };
   renderVals() {
     const faqs = [
-      { q: "What is remote patient monitoring?", a: "For eligible patients, remote patient monitoring uses home devices, such as blood pressure monitors, smart scales, and glucometers, to share health information with our care team between visits. This helps us identify meaningful changes early and provide timely follow-up when needed." },
-      { q: "What should I bring to my appointment?", a: "Please bring an updated list of all medications, including prescriptions, over-the-counter medicines, vitamins, and supplements. Also bring home blood pressure, weight, or blood sugar readings if available; recent test results or records from other clinics; and any questions or concerns you would like to discuss." }
-    ].map((f, i) => ({ ...f, open: this.state.open === i, sign: this.state.open === i ? "−" : "+", toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })) }));
-    const devices = [
-      { icon: "icon-10.svg", t: "Home Blood Pressure Monitors" },
-      { icon: "icon-11.svg", t: "Smart Scales" },
-      { icon: "icon-12.svg", t: "Glucometers" }
+      { q: "Which laboratories does Noor Health Clinic use?", a: "We use Labcorp and Quest Diagnostics for most outpatient laboratory testing." },
+      { q: "Are laboratory tests covered by insurance for membership patients?", a: "Medically necessary laboratory tests are billed through your insurance. Coverage, deductibles, copays, and other out-of-pocket costs vary by insurance plan and the specific test ordered." },
+      { q: "Will I need laboratory testing at every visit?", a: "No. Laboratory testing is ordered only when it is clinically appropriate and likely to help guide your care." },
+      { q: "How will I receive my results?", a: "Our team reviews results and communicates next steps through the patient portal, telephone, telehealth, or an in-person visit, depending on the result and your care needs." },
+      { q: "Can Noor Health Clinic coordinate care with specialists?", a: "Yes. We can help coordinate referrals, review relevant records and recommendations, and support follow-up across your care team." },
+      { q: "Does the Membership cover my laboratory expenses?", a: "Medically necessary laboratory testing is billed directly to the patient\u2019s insurance plan. The clinic does not include labs in the membership fee; they remain subject to insurance processing, and any out\u2011of\u2011pocket costs are the patient\u2019s responsibility." }
+    ].map((f, i) => ({ ...f, open: this.state.open === i, sign: this.state.open === i ? "\u2212" : "+", toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })) }));
+    const supportItems = [
+      { icon: "icon-2.svg", t: "Individualized laboratory orders for prevention, new symptoms, and chronic conditions" },
+      { icon: "icon-8.svg", t: "Clear review of laboratory results and recommended next steps" },
+      { icon: "icon-1.svg", t: "Medication monitoring and reconciliation based on laboratory results." },
+      { icon: "icon-5.svg", t: "Referral coordination and review of specialist recommendations" },
+      { icon: "icon-6.svg", t: "Follow-up after abnormal results." },
+      { icon: "icon-3.svg", t: "Follow-up labs after hospital visits, or medication changes" }
     ];
-    const support = [
-      { icon: "icon-7.svg", t: "High Blood Pressure", a: "High blood pressure often has no symptoms, but it can increase the risk of heart attack, stroke, and kidney disease. Our team helps patients monitor their blood pressure, use medications safely when prescribed, and make realistic lifestyle changes.", b: "A care plan may include checking blood pressure at home, preparing more meals at home, reducing high-sodium packaged foods, or adding regular walks. These steps, along with medication when clinically appropriate, can support better blood pressure control." },
-      { icon: "icon-2.svg", t: "Type 2 Diabetes and Prediabetes", a: "Managing diabetes is about more than one blood sugar number. Our nurse practitioners consider A1C, medications, kidney and heart health, nutrition, activity level, and your personal goals.", b: "Your plan may include building balanced meals around familiar foods and family routines, identifying manageable activity such as a 10- to 15-minute walk after meals, and scheduling follow-up A1C testing to track progress. Small, sustainable changes can make a meaningful difference over time." },
-      { icon: "icon-1.svg", t: "High Cholesterol and Heart Health", a: "Cholesterol management is based on your overall cardiovascular risk, including blood pressure, diabetes, smoking status, family history, and other health conditions.", b: "Your care plan may include adding more fiber-rich foods, such as vegetables, beans, oats, and whole grains; choosing healthier fats; building regular physical activity into your week; and using cholesterol-lowering medication when clinically appropriate." },
-      { icon: "icon-8.svg", t: "Weight Management", a: "Weight is influenced by many factors, including medical conditions, medications, sleep, stress, access to healthy foods, and daily routines. Our approach is respectful, nonjudgmental, and focused on health rather than quick fixes.", b: "We may work with you to set one achievable goal at a time, such as choosing water instead of sugary drinks most days, adding protein and fiber at breakfast, or taking short movement breaks during the workday. When appropriate, we can also discuss medical treatment options and referrals." }
-    ];
-    const supportV = support.map((s, i) => ({ ...s, open: this.state.sup === i, sign: this.state.sup === i ? "−" : "+", toggle: () => this.setState(st => ({ sup: st.sup === i ? -1 : i })) }));
     return {
-      devices, support: supportV, faqs,
+      supportItems, faqs,
       menuOpen: this.state.menuOpen,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false })
