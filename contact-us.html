@@ -12,6 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
 <style>
+  h1, h2, h3, h4, h5, h6 { text-wrap: balance !important; }
+  p, li, dd { text-wrap: pretty !important; }
+
   body { margin: 0; background: #FAF7F2; }
   a { color: #1F3A2E; text-decoration: none; }
   a:hover { color: #A9823C; }
@@ -90,7 +93,7 @@
 
   <section id="top" data-screen-label="Contact hero" style="position: relative; padding: clamp(56px, 8vw, 112px) clamp(16px, 4vw, 56px) clamp(64px, 9vw, 124px); background-color: #E7E8DF; background-image: radial-gradient(120% 90% at 50% 0%, rgba(243, 244, 238, 0.86) 0%, rgba(238, 239, 231, 0.78) 50%, rgba(243, 240, 233, 0.88) 100%), url('img-office-reception.jpg'); background-size: cover, cover; background-position: center, center; border-bottom: 1px solid rgba(46, 42, 37, 0.06);">
     <div style="max-width: 760px; margin: 0 auto; text-align: center;">
-      <p style="margin: 0 0 20px; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #3C5B49; font-weight: 500;">Noor Health Clinic</p>
+      <p style="margin: 0 0 20px; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #3C5B49; font-weight: 500;">Noor Health&nbsp;Clinic</p>
       <h1 style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; color: #2A2621; text-wrap: balance;">Contact Us</h1>
       
     </div>
@@ -100,7 +103,7 @@
   <section id="contact" data-screen-label="Contact + form" style="padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); background: #FAF7F2;">
     <div class="split" style="max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 64px); align-items: start;">
       <div>
-        <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500;">Get in Touch</p>
+        <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500;">Get in&nbsp;Touch</p>
                 <div style="border-top: 1px solid rgba(46, 42, 37, 0.12); margin-top: 8px;">
           <div style="padding: 22px 0; border-bottom: 1px solid rgba(46, 42, 37, 0.12);">
             <p style="margin: 0 0 6px; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #7A5F22; font-weight: 500;">Phone</p>
@@ -120,21 +123,21 @@
       <div style="border-radius: 28px; padding: clamp(24px, 4vw, 44px); background: linear-gradient(180deg, #FCFDFA 0%, #F4F7EF 100%); border: 1px solid rgba(255, 255, 255, 0.92); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 30px 60px -30px rgba(46, 42, 37, 0.4);">
         <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
           <form onSubmit="{{ onSubmit }}" style="display: grid; gap: 18px;">
-            <h3 style="margin: 0 0 4px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); color: #1F3A2E;">Send Us a Message</h3>
+            <h3 style="margin: 0 0 4px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); color: #1F3A2E;">Send Us a&nbsp;Message</h3>
             <div class="grid-sym" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
               <label style="display: grid; gap: 8px;"><span style="font-size: 14.5px; font-weight: 500; color: #3A342C;">Name</span><input type="text" name="name" required="" autocomplete="name" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 14px; border: 1px solid rgba(46, 42, 37, 0.16); background: #FFFFFF; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #2A2621; outline: none;" style-focus="border-color: #A9823C; box-shadow: 0 0 0 3px rgba(169, 130, 60, 0.18);" /></label>
               <label style="display: grid; gap: 8px;"><span style="font-size: 14.5px; font-weight: 500; color: #3A342C;">Phone</span><input type="tel" name="phone" autocomplete="tel" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 14px; border: 1px solid rgba(46, 42, 37, 0.16); background: #FFFFFF; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #2A2621; outline: none;" style-focus="border-color: #A9823C; box-shadow: 0 0 0 3px rgba(169, 130, 60, 0.18);" /></label>
             </div>
             <label style="display: grid; gap: 8px;"><span style="font-size: 14.5px; font-weight: 500; color: #3A342C;">Email</span><input type="email" name="email" required="" autocomplete="email" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 14px; border: 1px solid rgba(46, 42, 37, 0.16); background: #FFFFFF; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #2A2621; outline: none;" style-focus="border-color: #A9823C; box-shadow: 0 0 0 3px rgba(169, 130, 60, 0.18);" /></label>
             <label style="display: grid; gap: 8px;"><span style="font-size: 14.5px; font-weight: 500; color: #3A342C;">Message</span><textarea name="message" rows="5" required="" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 14px; border: 1px solid rgba(46, 42, 37, 0.16); background: #FFFFFF; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #2A2621; outline: none; resize: vertical; min-height: 130px;" style-focus="border-color: #A9823C; box-shadow: 0 0 0 3px rgba(169, 130, 60, 0.18);"></textarea></label>
-            <p style="margin: 0; font-size: 16.5px; line-height: 1.55; color: #6B6257;">Please don't include private medical details. For emergencies, call 911.</p>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.55; color: #6B6257;">Please don't include private medical details. For emergencies, call&nbsp;911.</p>
             <div><button type="submit" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 34px; border: 0; border-radius: 999px; cursor: pointer; background: #1F3A2E; color: #FBF8F2; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; box-shadow: 0 1px 2px rgba(20, 34, 26, 0.3), 0 18px 34px -16px rgba(20, 34, 26, 0.6);" style-hover="background: #2B4A3B;">Send Message <span style="font-size: 17px;">→</span></button></div>
           </form>
         </sc-if>
         <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
           <div style="padding: clamp(24px, 4vw, 48px) 0; text-align: center;">
             <h3 style="margin: 0 0 10px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); color: #1F3A2E;">Thank you</h3>
-            <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.6; color: #5E564B;">Your message has been sent. Our team will get back to you soon.</p>
+            <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.6; color: #5E564B;">Your message has been sent. Our team will get back to you&nbsp;soon.</p>
             <button type="button" onClick="{{ reset }}" style="padding: 12px 24px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-family: 'DM Sans', sans-serif; font-size: 15.5px; font-weight: 500; cursor: pointer;">Send another message</button>
           </div>
         </sc-if>
@@ -155,20 +158,20 @@
     <div style="max-width: 900px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: clamp(28px, 3.5vw, 44px);">
         <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500;">New Patients</p>
-        <h2 style="margin: 0 0 14px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; color: #2A2621;">Download Patient Forms</h2>
-        <p style="margin: 0 auto; max-width: 560px; font-size: 16.5px; line-height: 1.6; color: #5E564B;">Download and complete your forms before your first visit.</p>
+        <h2 style="margin: 0 0 14px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; color: #2A2621;">Download Patient&nbsp;Forms</h2>
+        <p style="margin: 0 auto; max-width: 560px; font-size: 16.5px; line-height: 1.6; color: #5E564B;">Download and complete your forms before your first&nbsp;visit.</p>
       </div>
       <div class="grid-sym" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
         <div style="display: flex; flex-direction: column; align-items: flex-start; background: linear-gradient(180deg, #FDFDFA 0%, #F1F1EA 100%); border: 1px solid rgba(46, 42, 37, 0.07); border-radius: 22px; padding: 28px 26px; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 20px 40px -24px rgba(46, 42, 37, 0.42);">
           <span style="display: flex; align-items: center; justify-content: center; width: 52px; height: 64px; margin-bottom: 20px; border-radius: 8px; background: #FFFFFF; border: 1px solid rgba(46, 42, 37, 0.12); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8A6B28; box-shadow: 0 8px 16px -10px rgba(46, 42, 37, 0.4);">PDF</span>
-          <h3 style="margin: 0 0 8px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #2A2621;">New Patient Registration</h3>
-          <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.6; color: #6B6257;">Complete before your first visit.</p>
+          <h3 style="margin: 0 0 8px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #2A2621;">New Patient&nbsp;Registration</h3>
+          <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.6; color: #6B6257;">Complete before your first&nbsp;visit.</p>
           <a href="#" download="" style="margin-top: auto; display: inline-flex; align-items: center; gap: 10px; padding: 13px 24px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-size: 15.5px; font-weight: 500;" style-hover="background: #FFFFFF;">Download PDF <span style="font-size: 16px;">↓</span></a>
         </div>
         <div style="display: flex; flex-direction: column; align-items: flex-start; background: linear-gradient(180deg, #FDFDFA 0%, #F1F1EA 100%); border: 1px solid rgba(46, 42, 37, 0.07); border-radius: 22px; padding: 28px 26px; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 20px 40px -24px rgba(46, 42, 37, 0.42);">
           <span style="display: flex; align-items: center; justify-content: center; width: 52px; height: 64px; margin-bottom: 20px; border-radius: 8px; background: #FFFFFF; border: 1px solid rgba(46, 42, 37, 0.12); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8A6B28; box-shadow: 0 8px 16px -10px rgba(46, 42, 37, 0.4);">PDF</span>
-          <h3 style="margin: 0 0 8px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #2A2621;">Insurances &amp; Memberships</h3>
-          <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.6; color: #6B6257;">Insurance details and membership forms.</p>
+          <h3 style="margin: 0 0 8px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #2A2621;">Insurances &amp;&nbsp;Memberships</h3>
+          <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.6; color: #6B6257;">Insurance details and membership&nbsp;forms.</p>
           <a href="#" download="" style="margin-top: auto; display: inline-flex; align-items: center; gap: 10px; padding: 13px 24px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-size: 15.5px; font-weight: 500;" style-hover="background: #FFFFFF;">Download PDF <span style="font-size: 16px;">↓</span></a>
         </div>
       </div>
@@ -177,8 +180,8 @@
 
   <section id="book" style="position: relative; z-index: 1; padding: clamp(64px, 9vw, 140px) clamp(24px, 5vw, 72px); background-color: #1F3A2E; background-image: linear-gradient(0deg, rgba(31, 58, 46, 0.9) 0%, rgba(31, 58, 46, 0.84) 100%), url('img-grass.jpg'); background-size: cover, cover; background-position: center, center;">
     <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-      <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #D2B27E;">Book a Visit</p>
-      <h2 style="margin: 0 0 20px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.035em; color: #F3F5F0;">Let's Get You Seen</h2>
+      <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #D2B27E;">Book a&nbsp;Visit</p>
+      <h2 style="margin: 0 0 20px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.035em; color: #F3F5F0;">Let's Get You&nbsp;Seen</h2>
       <p style="margin: 0 auto 40px; max-width: 460px; font-size: 16.5px; line-height: 1.7; color: rgba(251, 249, 244, 0.86);">Pick a time that works for you.<br />It only takes a minute.</p>
       <a href="https://waitwhile.com/locations/noor-health-clinic" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book Now <span style="font-size: 17px;">→</span></a>
     </div>

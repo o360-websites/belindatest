@@ -12,6 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
 <style>
+  h1, h2, h3, h4, h5, h6 { text-wrap: balance !important; }
+  p, li, dd { text-wrap: pretty !important; }
+
   body { margin: 0; background: #FAF7F2; }
   a { color: #1F3A2E; text-decoration: none; }
   a:hover { color: #A9823C; }
@@ -84,9 +87,9 @@
   <section id="top" data-screen-label="Primary Care hero" style="position: relative; padding: clamp(56px, 8vw, 112px) clamp(16px, 4vw, 56px) clamp(64px, 9vw, 124px); background-color: #E7E8DF; background-image: radial-gradient(120% 90% at 50% 0%, rgba(243, 244, 238, 0.86) 0%, rgba(238, 239, 231, 0.78) 50%, rgba(243, 240, 233, 0.88) 100%), url('img-office-exam.jpg'); background-size: cover, cover; background-position: center, center; border-bottom: 1px solid rgba(46, 42, 37, 0.06);">
     <div style="max-width: 760px; margin: 0 auto; text-align: center;">
       <p style="margin: 0 0 20px; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #3C5B49; font-weight: 500;">Our Services</p>
-      <h1 style="margin: 0 0 30px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; color: #2A2621; text-wrap: balance;">Primary Care &amp; Direct Primary Care</h1>
+      <h1 style="margin: 0 0 30px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; color: #2A2621; text-wrap: balance;">Primary Care &amp; Direct Primary&nbsp;Care</h1>
       <div style="max-width: 540px; margin: 0 auto; background: linear-gradient(180deg, #FCFDFA 0%, #F4F7EF 100%); border: 1px solid rgba(255, 255, 255, 0.92); border-radius: 24px; padding: clamp(16px, 2vw, 22px) clamp(18px, 2.8vw, 30px); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 30px 60px -30px rgba(46, 42, 37, 0.4);">
-        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #5E564B; text-wrap: pretty;">Empowering patients with education and technology to stay healthy and out of the hospital. ARNP-led, relationship-based primary care blending science with compassion.</p>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #5E564B; text-wrap: pretty;">Empowering patients with education and technology to stay healthy and out of the hospital. ARNP-led, relationship-based primary care blending science with&nbsp;compassion.</p>
       </div>
       <div style="margin-top: 32px; display: flex; justify-content: center;"><a href="https://waitwhile.com/locations/noor-health-clinic" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book an appointment <span style="font-size: 17px;">→</span></a></div>
     </div>
@@ -100,8 +103,8 @@
 
   <section id="services" data-screen-label="Our Services" style="padding: clamp(24px, 3vw, 40px) clamp(16px, 4vw, 56px) clamp(56px, 7vw, 104px); background: #FAF7F2;">
     <div style="max-width: 1060px; margin: 0 auto;">
-      <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500; text-align: center;">What We Offer</p>
-      <h2 style="margin: 0 0 clamp(28px, 3.5vw, 40px); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -0.015em; color: #2A2621; text-align: center;">Primary Care Services</h2>
+      <p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6046; font-weight: 500; text-align: center;">What We&nbsp;Offer</p>
+      <h2 style="margin: 0 0 clamp(28px, 3.5vw, 40px); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -0.015em; color: #2A2621; text-align: center;">Primary Care&nbsp;Services</h2>
       <div class="grid-sym grid-6" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
         <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
           <div style="background: linear-gradient(180deg, #FDFDFA 0%, #F1F1EA 100%); border: 1px solid rgba(46, 42, 37, 0.07); border-radius: 22px; padding: 26px 24px 28px; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 20px 40px -24px rgba(46, 42, 37, 0.42);" style-hover="box-shadow: 0 1px 2px rgba(46,42,37,0.05), 0 28px 50px -24px rgba(46,42,37,0.5); transform: translateY(-2px);">
@@ -118,7 +121,7 @@
     <div class="split" style="max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: 32px; overflow: hidden; background: linear-gradient(160deg, #ECEEE6 0%, #E2E4D9 100%); border: 1px solid rgba(60, 91, 73, 0.16); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.04), 0 40px 70px -40px rgba(46, 42, 37, 0.35);">
       <div role="img" aria-label="A provider reviewing health readings with a patient" style="min-height: 320px; height: 100%; background: url('img-office-consult.jpg') center / cover no-repeat;"></div>
       <div style="padding: clamp(28px, 4.5vw, 56px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6046;">Direct Primary Care</p>
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6046;">Direct Primary&nbsp;Care</p>
         <p style="margin: 0 0 28px; font-size: 16.5px; line-height: 1.65; color: #3A342C; text-wrap: pretty;">We offer direct primary care (DPC), a <strong style="color: #2A2621; font-weight: 700;">membership-based model</strong> that provides access to defined primary care services for a monthly fee. DPC supports personalized, ongoing care but does not replace health insurance.</p>
         <a href="memberships.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-size: 15.5px; font-weight: 500; white-space: nowrap; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 12px 24px -16px rgba(46, 42, 37, 0.5);" style-hover="background: #FFFFFF;">See Membership Options <span style="font-size: 16px;">→</span></a>
       </div>
@@ -135,7 +138,7 @@
         <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
           <div>
             <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 14px; padding: 20px clamp(18px, 3vw, 28px); border-radius: 20px; background: linear-gradient(180deg, #FDFDFA 0%, #F6F6F0 100%); border: 1px solid rgba(46, 42, 37, 0.08); box-shadow: 0 1px 2px rgba(46, 42, 37, 0.04), 0 12px 24px -20px rgba(46, 42, 37, 0.4); cursor: pointer; text-align: left; font-family: 'Poppins', sans-serif; font-size: clamp(16px, 1.4vw, 17.5px); font-weight: 500; color: #2A2621;">
-              <span>{{ f.q }}</span>
+              <span style="text-wrap: balance;">{{ f.q }}</span>
               <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: #E7EDE4; color: #1F3A2E; font-family: 'DM Sans', sans-serif; font-size: 20px; line-height: 1;">{{ f.sign }}</span>
             </button>
             <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
@@ -154,8 +157,8 @@
         <img src="img-hodo-2.webp" alt="Hodo, nurse practitioner" style="width: clamp(130px, 15vw, 172px); height: clamp(170px, 20vw, 230px); object-fit: cover; object-position: center top; border-radius: 18px; box-sizing: border-box; border: 4px solid #F7FAF4; box-shadow: 0 16px 32px -16px rgba(46, 42, 37, 0.5); display: block;" />
       </div>
       <div style="flex: 1 1 300px; min-width: 0;">
-        <h2 style="margin: 0 0 14px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; color: #1F3A2E;">Meet the Providers</h2>
-        <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.7; color: #5E564B;">Shadia and Hodo are University of Washington-trained Nurse Practitioners who founded Noor Health Clinic to give families un-rushed visits, clear health guidance, and simple home monitoring. Keeping you supported and in control.</p>
+        <h2 style="margin: 0 0 14px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; color: #1F3A2E;">Meet the&nbsp;Providers</h2>
+        <p style="margin: 0 0 24px; font-size: 16.5px; line-height: 1.7; color: #5E564B;">Shadia and Hodo are University of Washington-trained Nurse Practitioners who founded Noor Health Clinic to give families un-rushed visits, clear health guidance, and simple home monitoring. Keeping you supported and in&nbsp;control.</p>
         <a href="about-us.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px; background: rgba(252, 254, 250, 0.92); border: 1px solid rgba(31, 58, 46, 0.28); color: #1F3A2E; font-size: 15.5px; font-weight: 500; box-shadow: 0 1px 2px rgba(46, 42, 37, 0.05), 0 12px 24px -16px rgba(46, 42, 37, 0.5);" style-hover="background: #FFFFFF;">Read Our Story <span style="font-size: 16px;">→</span></a>
       </div>
     </div>
@@ -163,8 +166,8 @@
 
   <section id="book" style="position: relative; z-index: 1; padding: clamp(64px, 9vw, 140px) clamp(24px, 5vw, 72px); background-color: #1F3A2E; background-image: linear-gradient(0deg, rgba(31, 58, 46, 0.9) 0%, rgba(31, 58, 46, 0.84) 100%), url('img-grass.jpg'); background-size: cover, cover; background-position: center, center;">
     <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-      <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #D2B27E;">Book a Visit</p>
-      <h2 style="margin: 0 0 20px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.035em; color: #F3F5F0;">Let's Get You Seen</h2>
+      <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; color: #D2B27E;">Book a&nbsp;Visit</p>
+      <h2 style="margin: 0 0 20px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.035em; color: #F3F5F0;">Let's Get You&nbsp;Seen</h2>
       <p style="margin: 0 auto 40px; max-width: 460px; font-size: 16.5px; line-height: 1.7; color: rgba(251, 249, 244, 0.86);">Pick a time that works for you.<br />It only takes a minute.</p>
       <a href="https://waitwhile.com/locations/noor-health-clinic" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 999px; background: linear-gradient(180deg, #F0C74E 0%, #D2A83B 100%); color: #2A2621; font-size: 16.5px; font-weight: 500; box-shadow: 0 1px 2px rgba(122, 92, 38, 0.3), 0 18px 34px -16px rgba(122, 92, 38, 0.6);" style-hover="background: linear-gradient(180deg, #E6B93C 0%, #BE942F 100%);">Book Now <span style="font-size: 17px;">→</span></a>
     </div>
@@ -201,24 +204,24 @@ class Component extends DCLogic {
   state = { menuOpen: false, open: 0 };
   renderVals() {
     const faqs = [
-      { q: "What is primary care?", a: "Primary care focuses on adult health and ongoing, coordinated care. Our nurse practitioners provide preventive care, evaluate new concerns, manage chronic conditions, prescribe medications, order and interpret diagnostic testing, and coordinate specialty care." },
-      { q: "What is a nurse practitioner?", a: "A nurse practitioner (NP) is an advanced practice clinician with graduate-level education and clinical training. NPs evaluate, diagnose, treat, prescribe medications, order testing, and develop individualized care plans for adult patients." },
-      { q: "What conditions do you treat?", a: "We evaluate and manage a range of adult health concerns, including high blood pressure, diabetes, high cholesterol, heart disease risk factors, asthma/COPD, thyroid conditions, chronic kidney disease, weight-related health concerns, and common acute illnesses." },
-      { q: "Do you provide preventive care?", a: "Yes. Preventive care may include wellness visits, screening recommendations, immunization review, medication and supplement review, lifestyle support, and early identification of health risks." },
-      { q: "What is remote patient monitoring?", a: "Remote patient monitoring (RPM) uses connected home devices, such as blood pressure monitors, smart scales, or glucometers, to share health readings with the care team between visits. RPM may be appropriate for eligible patients managing certain chronic conditions." },
-      { q: "Can you manage multiple chronic conditions?", a: "Yes. We provide ongoing care for patients with more than one chronic condition. Your care plan may include symptom review, medication management, laboratory monitoring, lifestyle support, remote monitoring when appropriate, and specialist coordination." },
-      { q: "Do you provide medication management?", a: "Yes. We review medications for indication, effectiveness, possible side effects, interactions, duplicate therapies, and polypharmacy concerns. Medication reconciliation is also provided after hospital, emergency department, urgent care, or specialist visits when needed." },
-      { q: "Can you coordinate care with specialists?", a: "Yes. We can place referrals, review relevant test results and specialist recommendations, reconcile medications, and help connect each part of your care plan." },
-      { q: "Do you offer telehealth?", a: "Yes. Virtual visits are available for appropriate concerns, including medication follow-up, result review, stable chronic-condition management, home-reading review, counseling, and some mild symptoms. An in-person visit may be recommended when an examination, testing, vaccination, or procedure is needed." },
-      { q: "When should I seek emergency care?", a: "Call 911 or seek emergency care immediately for chest pain, severe trouble breathing, signs of stroke, fainting, seizure, severe allergic reaction, heavy bleeding, severe injury, or thoughts of harming yourself or others. Telehealth is not appropriate for emergencies." }
-    ].map((f, i) => ({ ...f, open: this.state.open === i, sign: this.state.open === i ? "−" : "+", toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })) }));
+      { q: "What is primary\u00A0care?", a: "Primary care focuses on adult health and ongoing, coordinated care. Our nurse practitioners provide preventive care, evaluate new concerns, manage chronic conditions, prescribe medications, order and interpret diagnostic testing, and coordinate specialty\u00A0care." },
+      { q: "What is a nurse\u00A0practitioner?", a: "A nurse practitioner (NP) is an advanced practice clinician with graduate-level education and clinical training. NPs evaluate, diagnose, treat, prescribe medications, order testing, and develop individualized care plans for adult\u00A0patients." },
+      { q: "What conditions do you\u00A0treat?", a: "We evaluate and manage a range of adult health concerns, including high blood pressure, diabetes, high cholesterol, heart disease risk factors, asthma/COPD, thyroid conditions, chronic kidney disease, weight-related health concerns, and common acute\u00A0illnesses." },
+      { q: "Do you provide preventive\u00A0care?", a: "Yes. Preventive care may include wellness visits, screening recommendations, immunization review, medication and supplement review, lifestyle support, and early identification of health\u00A0risks." },
+      { q: "What is remote patient\u00A0monitoring?", a: "Remote patient monitoring (RPM) uses connected home devices, such as blood pressure monitors, smart scales, or glucometers, to share health readings with the care team between visits. RPM may be appropriate for eligible patients managing certain chronic\u00A0conditions." },
+      { q: "Can you manage multiple chronic\u00A0conditions?", a: "Yes. We provide ongoing care for patients with more than one chronic condition. Your care plan may include symptom review, medication management, laboratory monitoring, lifestyle support, remote monitoring when appropriate, and specialist\u00A0coordination." },
+      { q: "Do you provide medication\u00A0management?", a: "Yes. We review medications for indication, effectiveness, possible side effects, interactions, duplicate therapies, and polypharmacy concerns. Medication reconciliation is also provided after hospital, emergency department, urgent care, or specialist visits when\u00A0needed." },
+      { q: "Can you coordinate care with\u00A0specialists?", a: "Yes. We can place referrals, review relevant test results and specialist recommendations, reconcile medications, and help connect each part of your care\u00A0plan." },
+      { q: "Do you offer\u00A0telehealth?", a: "Yes. Virtual visits are available for appropriate concerns, including medication follow-up, result review, stable chronic-condition management, home-reading review, counseling, and some mild symptoms. An in-person visit may be recommended when an examination, testing, vaccination, or procedure is\u00A0needed." },
+      { q: "When should I seek emergency\u00A0care?", a: "Call 911 or seek emergency care immediately for chest pain, severe trouble breathing, signs of stroke, fainting, seizure, severe allergic reaction, heavy bleeding, severe injury, or thoughts of harming yourself or others. Telehealth is not appropriate for\u00A0emergencies." }
+    ].map((f, i) => ({ ...f, q: f.q.replace(/ (\S+)$/, "\u00A0$1"), a: f.a ? f.a.replace(/ (\S+)$/, "\u00A0$1") : f.a, open: this.state.open === i, sign: this.state.open === i ? "−" : "+", toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })) }));
     const services = [
-      { icon: "icon-3.svg", t: "In-Person Visits", d: "Preventive care, acute concerns, and hands-on exams." },
-      { icon: "icon-4.svg", t: "Virtual Visits", d: "Follow-ups, medication reviews, and lab results from home." },
-      { icon: "icon-6.svg", t: "Remote Patient Monitoring", d: "Home health readings reviewed between visits." },
-      { icon: "icon-1.svg", t: "Medical Monitoring", d: "Medication review, reconciliation, and monitoring." },
-      { icon: "icon-2.svg", t: "Lab Tests", d: "We order tests and explain your results in plain words." },
-      { icon: "icon-5.svg", t: "Referrals and Coordination", d: "Specialist referrals and care coordination." }
+      { icon: "icon-3.svg", t: "In-Person Visits", d: "Preventive care, acute concerns, and hands-on\u00A0exams." },
+      { icon: "icon-4.svg", t: "Virtual Visits", d: "Follow-ups, medication reviews, and lab results from\u00A0home." },
+      { icon: "icon-6.svg", t: "Remote Patient\u00A0Monitoring", d: "Home health readings reviewed between\u00A0visits." },
+      { icon: "icon-1.svg", t: "Medical Monitoring", d: "Medication review, reconciliation, and\u00A0monitoring." },
+      { icon: "icon-2.svg", t: "Lab Tests", d: "We order tests and explain your results in plain\u00A0words." },
+      { icon: "icon-5.svg", t: "Referrals and\u00A0Coordination", d: "Specialist referrals and care\u00A0coordination." }
     ];
     return {
       services,

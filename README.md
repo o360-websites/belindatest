@@ -18,12 +18,19 @@ All files sit in one folder: each page is an HTML file that loads `support.js` p
 | patient-education.html | Patient Education |
 | contact-us.html | Contact Us |
 | careers.html | Careers |
+| diabetes-care.html | Article: Diabetes Care |
+| alzheimers-disease.html | Article: Alzheimer’s Disease |
+| arthritis.html | Article: Types of Arthritis |
+| copd.html | Article: COPD |
+| chronic-kidney-disease.html | Article: Chronic Kidney Disease |
+| heart-disease.html | Article: Heart Disease |
 
 ## Build notes
 - Keep all copy verbatim — client-approved.
 - Every "Book…" button opens https://waitwhile.com/locations/noor-health-clinic in a new tab.
 - Contact and Careers forms are front-end only; wire to a real form handler (e.g. Elementor Forms).
-- "Download PDF" links on Contact Us and article links on Patient Education are placeholders (`href="#"`).
+- "Download PDF" links on Contact Us are placeholders (`href="#"`).
+- Article featured images for Diabetes, Arthritis, Kidney and Heart load from the live WordPress site (noor-health.360core.io) — replace with local files before launch.
 
 ---
 
