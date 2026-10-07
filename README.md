@@ -2,6 +2,8 @@
 
 All files sit in one folder: each page is an HTML file that loads `support.js` plus the images/icons beside it. Open any page in a browser (internet needed for Google Fonts). Images are resized to max 1920px wide.
 
+The default branch is `main`; changes come in on their own branch and are merged into it.
+
 ## Pages
 | File | Page |
 |---|---|
